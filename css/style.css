@@ -1,0 +1,108 @@
+ /*
+                Operation Button Color(Orange) : #fe7c00
+                Normal Button(Gray): #bbbcc0
+                Special Button(Gray Dark): #bcbdbf
+                Screen(Brown Dark): #181818
+                Border: #97989c
+            */
+            *{
+                font-family: 'Roboto', sans-serif;
+            }
+            body,html{
+                padding:0px;
+                margin:0px;
+                height:100%;
+            }
+            .ios-calc-container{
+                position:relative;
+                display:flex;
+                flex-flow:row nowrap;
+                justify-content: center;
+                align-items:center;
+                height:100%;
+
+                background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            }
+            .ios-calc-blur{
+                position:absolute;
+                
+                width:100%;
+                height:100%;
+            }
+            .ios-calc-container .ios-calc-wrapper{
+                position:relative;
+                z-index:1;
+                display:grid;
+                grid-template-columns:repeat(4,1fr);
+                grid-template-rows:repeat(6,1fr);
+                
+                width:100%;
+                max-width:400px;
+                max-height:528px;
+                height:100%;
+				grid-template-areas:	'screen screen screen screen' '. . . .' '. . . .' '. . . .' '. . . .' 'cero cero . .';
+            }
+            .ios-calc-container .ios-calc-wrapper div{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-size:26px;
+                cursor:pointer;
+            }
+            .ios-calc-container .ios-calc-wrapper .ios-screen
+            {
+               display: block;
+               background-color:#181818;
+               grid-area:screen;
+               color:#fff;
+               text-align: right;
+               font-size:48px;
+               overflow: auto;
+            }
+            
+            .ios-calc-container .ios-calc-wrapper .ios-button
+            {
+				
+               background-color: #bbbcc0;
+               border:1px solid #656565;
+               border-right:none;
+               border-top:none;
+
+            }
+            .ios-calc-container .ios-calc-wrapper .ios-button:hover
+            {
+
+               background-color: #a5a5a5;
+              
+
+            }
+            
+            .ios-calc-container .ios-calc-wrapper .ios-button.ios-cero
+            {
+                grid-area:cero;
+            }
+            .ios-calc-container .ios-calc-wrapper .ios-button.ios-operation
+            {
+				
+                background-color:#fe7c00;
+                color:#fff;
+            }
+            .ios-calc-container .ios-calc-wrapper .ios-button.ios-operation:hover
+            {
+                background-color:#de6e04;
+
+            }
+            
+            .ios-calc-container .ios-calc-wrapper .ios-button.ios-special
+            {
+				
+                background-color:#b1b1b1;
+            }
+            .ios-calc-container .ios-calc-wrapper .ios-button.ios-special:hover
+            {
+                background-color:#9e9e9e;
+            }
+			
